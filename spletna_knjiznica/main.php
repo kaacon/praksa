@@ -91,7 +91,7 @@
     
             <div class="main">
                 
-            <form class="Najdi knjigo" action="main.php" method="post" id="forma">
+            <form class="Najdi knjigo" action="main.php" method="post" id="vrstica">
             <input placeholder="Ime knjige" type="text" name="iskanje" id="iskanje">
             <button type="submit" name="gumb" value="ena">Prikaži knjigo</button>
             <button type="submit" name="gumb" value="dva">Prikaži celotno zbirko</button>
