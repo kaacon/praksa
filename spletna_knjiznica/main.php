@@ -43,12 +43,49 @@
                     <div class="novica">
                         <img class="novicaIMG" src="https://cataas.com/cat">
                         <div class="novicaTXT">
-                            <h3> <a href="#">NAJLEPŠI MAČEK</h3></a>
+                            <h3> <a href="#">Lorem ipsum dolor sit</h3></a>
                                   <br>
-                            <span>Zakon mačka so odkrili v Postojni</span>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                         </div>
                         <div class="clear"></div>
                     </div>
+                    <div class="novica">
+                        <img class="novicaIMG" src="https://cataas.com/cat">
+                        <div class="novicaTXT">
+                            <h3> <a href="#">Lorem ipsum dolor sit</h3></a>
+                                  <br>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="novica">
+                        <img class="novicaIMG" src="https://cataas.com/cat">
+                        <div class="novicaTXT">
+                            <h3> <a href="#">Lorem ipsum dolor sit</h3></a>
+                                  <br>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="novica">
+                        <img class="novicaIMG" src="https://cataas.com/cat">
+                        <div class="novicaTXT">
+                            <h3> <a href="#">Lorem ipsum dolor sit</h3></a>
+                                  <br>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="novica">
+                        <img class="novicaIMG" src="https://cataas.com/cat">
+                        <div class="novicaTXT">
+                            <h3> <a href="#">Lorem ipsum dolor sit</h3></a>
+                                  <br>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
 
             </div>
     
@@ -69,14 +106,14 @@
                         $text = $_POST['iskanje'];
                         $conn = new mysqli('localhost','root','','knjiznica');
                 
-                        $sql = "SELECT id_knjige, naslov, avtor, leto_izdaje FROM knjiga where naslov like '%$text%'";
+                        $sql = "SELECT id_knjiga, naslov, avtor, leto_izdaje FROM knjiga where naslov like '%$text%'";
 
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
 
                             while($row = $result->fetch_assoc()) {
-                                echo "<tr><td>".$row["id_knjige"]."</td><td>".$row["naslov"]."</td><td>".$row["avtor"]."</td><td>".$row["leto_izdaje"]."</td></tr>";
+                                echo "<tr><td>".$row["id_knjiga"]."</td><td>".$row["naslov"]."</td><td>".$row["avtor"]."</td><td>".$row["leto_izdaje"]."</td></tr>";
                             }
                             } 
                         else{
@@ -89,12 +126,12 @@
                         $conn = new mysqli('localhost','root','','knjiznica');
                 
                     
-                        $sql = "SELECT id_knjige, naslov, avtor, leto_izdaje FROM knjiga";
+                        $sql = "SELECT id_knjiga, naslov, avtor, leto_izdaje FROM knjiga";
                         $result = $conn->query($sql);
                         
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
-                            echo "<tr><td>".$row["id_knjige"]."</td><td>".$row["naslov"]."</td><td>".$row["avtor"]."</td><td>".$row["leto_izdaje"]."</td></tr>";
+                            echo "<tr><td>".$row["id_knjiga"]."</td><td>".$row["naslov"]."</td><td>".$row["avtor"]."</td><td>".$row["leto_izdaje"]."</td></tr>";
                             }
                         } else {
                             echo "0 results";
@@ -109,12 +146,12 @@
                             die("Connection failed: " . $conn->connect_error);
                         }
                         
-                        $sql = "SELECT id_knjige, naslov, avtor, leto_izdaje FROM knjiga";
+                        $sql = "SELECT id_knjiga, naslov, avtor, leto_izdaje FROM knjiga";
                         $result = $conn->query($sql);
                         
                         if ($result->num_rows > 0) {      
                             while($row = $result->fetch_assoc()) {
-                            echo "<tr><td>".$row["id_knjige"]."</td><td>".$row["naslov"]."</td><td>".$row["avtor"]."</td><td>".$row["leto_izdaje"]."</td></tr>";
+                            echo "<tr><td>".$row["id_knjiga"]."</td><td>".$row["naslov"]."</td><td>".$row["avtor"]."</td><td>".$row["leto_izdaje"]."</td></tr>";
                             }
                         } else {
                             echo "0 results";
