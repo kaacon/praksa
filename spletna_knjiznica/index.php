@@ -16,10 +16,11 @@
 ?>
 
 <body>
+    <div class="container">
     <div id="prijava">
         <form action="index.php" method="post" >
-            <input type="text" placeholder="Uporabniško ime" name="ime"><br>
-            <input type="password" placeholder="Geslo" name="geslo"><br>
+            <input type="text" placeholder="Uporabniško ime" name="ime"><br><br>
+            <input type="password" placeholder="Geslo" name="geslo"><br><br>
             <button type="submit">Prijava</button>
         </form>
     </div>
@@ -54,7 +55,7 @@
 
         }    
     ?>
-
+    </div>
 
 </body>
 </html>
