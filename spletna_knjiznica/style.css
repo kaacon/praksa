@@ -12,15 +12,45 @@
 /* #endregion */
 
 /**/
-#prijava{
+.container{
+    background-image: url("https://media.istockphoto.com/id/1279696698/vector/bookshelves-with-books-seamless-background.jpg?s=612x612&w=0&k=20&c=EB4M6gI9Ik7he2COVdmSmJFydA5bgZ-2cEWsThPx5XU=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    background-color: blue;
-    height: 150px;
+    height: 900px;
+}
+
+#prijava{
+    width: 80%;
+    background-color: rgba(250,250,250,0.6);
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
 }
 
  #prijava form{
-    width: 150px;
- }
+    position: relative;
+    left: 25%;
+    top: 25%;
+}
+
+#prijava form input{
+    width: 45%;
+    padding: 15px;
+    font-size: 15px;
+}
+
+#prijava form button{
+    width: 35%;
+    padding: 10px;
+    position: absolute;
+    left: 5%;
+    border: solid 1px black;
+    border-radius: 10px;
+    font-size: 15px;
+}
 
 /**/
 
@@ -33,7 +63,7 @@
     position: sticky;
     z-index: 100;
     top: 0px;
-    background-color: #9675e8;
+    background-color: rgba(255,255,255,0.7);
 }
 
 .meni img{
@@ -77,14 +107,13 @@
 .novice{
     float: left;
     width: 25%;
-    background-color: aquamarine;
     position: sticky;
     top: 100px;
     height: calc( 100vh - 100px);
 }
 
 .novica{
-    background-color: white;
+    background-color: rgba(0,0,0,0.5);
     border: 1px solid black;
     width: calc(60% - 2px);
     padding-top: 50px;
@@ -100,25 +129,26 @@
 }
 
 .novicaTXT{
-    width: 40%;
+    width: 70%;
     float: left;
     padding-left: 10px;
+    color: white;
 }
 
 .novicaTXT a:link, .novicaTXT a:visited, .novicaTXT a:active{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 .novicaTXT a:hover{
-    color: green;
+    color: plum;
     
 }
 
 .main{
     float: left;
     width: 75%;
-    background-color: chocolate;
+    background-color: rgba(220,220,220,0.6);
 }
 
 .tabelaKnjig{
@@ -127,6 +157,8 @@
     margin-right: auto;
     border: 1px solid black;
     border-collapse: collapse;
+    font-size: 20px;
+    text-align: center;
 }
 
 .tabelaKnjig td{
@@ -151,3 +183,4 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
