@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dodajanje</title>
+    <title>Odstranjevanje</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body></body>
-    
+<body>
 <div class="obroba">
-    
     <?php
         session_start();
         if(isset($_SESSION["id"]) || isset($_SESSION["uporabnisko_ime"])){
@@ -21,25 +19,21 @@
         }else{
             header("Location: main.php");
         }
-?>
-    
-    <div>
+    ?>
      <div id="forma"> 
        <a href="main.php"><i class="fa fa-arrow-circle-left"></i></a>
-    <form class="Najdi knjigo" action="dodaj.php" method="post">
+    <form action="odstrani.php" method="post">
         <input placeholder="Ime knjige" type="text" name="ime" id="iskanje"><br><br>
-        <input placeholder="Avtor" type="text" name="avtor" id="iskanje"><br><br>
-        <input placeholder="Leto izdaje" type="number" name="izdaja" id="iskanje">
-        <br><br>
-        <button type="submit" name="gumb">Dodaj knjigo</button>
+        <br>
+        <button type="submit" name="gumb">Odstrani knjigo</button>
     </form>
     </div>
+    
     <?php
 
-if(isset($_POST["ime"]) && isset($_POST["avtor"]) && isset($_POST["izdaja"])){
+    if(isset($_POST["ime"])){
     $ime = $_POST['ime'];
-    $avtor = $_POST['avtor'];
-    $izdaja = $_POST["izdaja"];
+
 
     $servername = "localhost";
     $username = "root";
@@ -48,33 +42,33 @@ if(isset($_POST["ime"]) && isset($_POST["avtor"]) && isset($_POST["izdaja"])){
     
     $conn = new mysqli($servername, $username, $password, $dbname);
     
-    $sql = "SELECT count(*) as n FROM knjiga where naslov = '$ime'";
+    $sql = "SELECT * FROM knjiga where naslov = '$ime';";
     $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
 
-    if ( intval($row["n"]) == 0 ) {
-
-        $sql = "INSERT INTO knjiga values (NULL, '$ime', '$avtor', '$izdaja') ";
+    if (!empty($result)) {
+        $sql = "DELETE FROM knjiga where naslov = '$ime' ";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Knjiga je dodana";
+            echo "Knjiga je bila odstranjena";
         } else {
-            echo "Knjiga ni dodana";
+            echo "Knjiga ni bila dodana";
         }
 
-    } else {
-        echo "Knjiga že obstaja";
-}
     }
+
     $conn->close();
-    }
+
     }
     ?>
-
+    
     </div>
 </div>
+
+
+
 </body>
 </html>
+
+
 
 

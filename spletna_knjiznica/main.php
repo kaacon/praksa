@@ -26,7 +26,7 @@
 
                 <?php
                     if($_SESSION["uporabnisko_ime"] == "admin"){
-                        echo "<li><a href='dodaj.php'>Dodajanje</a></li>";
+                        echo "<li><a href='dodaj.php'>Dodajanje</a></li><li><a href='odstrani.php'>Odstranjevanje</a></li>";
                     }
                 ?>
 
